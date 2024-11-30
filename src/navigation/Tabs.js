@@ -71,7 +71,7 @@ function Tabs() {
       <Tab.Screen
         name="HomeFunc"
         component={HomeStackScreen}
-        options={{ title: "Create", tabBarLabel: "New Emoji" }}
+        options={{ title: "Create", tabBarLabel: "Scan" }}
       />
       <Tab.Screen
         name="HistoryFunc"

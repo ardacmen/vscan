@@ -18,50 +18,11 @@ import { useNavigation } from "@react-navigation/native";
 
 export default function History() {
   const navigation = useNavigation();
-  const [data, setData] = useState([]);
-
-  useFocusEffect(
-    useCallback(() => {
-      getData();
-    }, [])
-  );
-
-  const getData = async () => {
-    const getAllHistory = await AsyncStorage.getItem("history");
-    if (getAllHistory) {
-      setData(JSON.parse(getAllHistory));
-    }
-  };
 
   return (
     <View style={styles.container}>
       <SafeAreaView>
-        <FlatList
-          data={data}
-          numColumns={3}
-          showsVerticalScrollIndicator={false}
-          ListHeaderComponent={<PageHeader title={"History"} />}
-          renderItem={({ item }) => (
-            <TouchableOpacity
-              onPress={() => {
-                navigation.navigate("Result", { item: item });
-              }}
-            >
-              <Image
-                source={{ uri: `${item.image}` }}
-                style={{
-                  width: byWidth(27),
-                  marginRight: toWidth(16),
-                  aspectRatio: 1,
-                  borderRadius: toWidth(16),
-                  marginBottom: toHeight(16),
-                }}
-              />
-            </TouchableOpacity>
-          )}
-          ListEmptyComponent={<Typography>0 Emoji found</Typography>}
-          keyExtractor={(item, index) => index.toString()}
-        />
+        <PageHeader title="History" />
       </SafeAreaView>
     </View>
   );
@@ -69,7 +30,7 @@ export default function History() {
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: toWidth(20),
+    paddingHorizontal: toWidth(16),
     width: "100%",
     height: "100%",
     backgroundColor: "#f1f3f7",

@@ -141,7 +141,7 @@ export default function SubscriptionModal({ isOpen, setIsOpen }) {
                 <View style={styles.downSideCard}>
                   <View style={styles.titleContainer}>
                     <Typography color="black" size={32} center weight="900">
-                      Create Emoji {"\n"}in a second
+                      Scan Text{"\n"}in a second
                     </Typography>
                   </View>
                   <View>
