@@ -1,0 +1,14 @@
+{
+  "images" : [
+    {
+      "filename" : "DALL·E 2024-11-29 08.06.53 - A vibrant and playful app icon for a funny emoji app. The icon features a square design with rounded edges, showcasing a cheerful, colorful cartoon em.jpg",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
